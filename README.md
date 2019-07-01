@@ -1,3 +1,20 @@
+# How to install/start
+Must be installed:
+Python 3.6.2
+git clone https://github.com/eugenykaminski/BBCResponder.git
+cd BBCResponder/BBCResponder/spiders
+
+# Usage start server:
+# python flask_ex1.py 
+# Examples:
+# http://localhost?chapter=XXX&news=YYY
+# http://localhost?chapter=sport&news=15
+# http://localhost?chapter=travel&news=5
+# http://localhost/?chapter=news&news=51
+# http://localhost/?chapter=news&news=2
+
+
+
 # BBCResponder
 
 BBC scrapping service
