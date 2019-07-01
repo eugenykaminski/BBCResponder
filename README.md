@@ -32,6 +32,7 @@ http://localhost/?chapter=news&news=2
 BBC scrapping service
 
 Need to create web service to get news titles and links from BBC website.
+
 The endpoint of the service will receive following request by GET HTTP method:
 
 http://localhost?chapter=XXX&news=YYY
@@ -52,8 +53,11 @@ Parce it given html to get YYY number of top news from the page and then return 
     
 }
 For example for the request:
+
 http://localhost?chapter=sport&news=3
+
 The service will return a response like this:
+
 {
     "chapter" : "sport",
     "news" : [
