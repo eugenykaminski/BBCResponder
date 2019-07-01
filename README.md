@@ -1,10 +1,15 @@
-# How to install/start
+h2 How to install/start
+
 Must be installed:
+
 Python 3.6.2
+
 git clone https://github.com/eugenykaminski/BBCResponder.git
+
 cd BBCResponder/BBCResponder/spiders
 
-# Usage (start server):
+
+h3 Usage (start server):
 python flask_ex1.py 
 Examples:
 http://localhost?chapter=XXX&news=YYY
