@@ -10,12 +10,19 @@ cd BBCResponder/BBCResponder/spiders
 
 
 h3 Usage (start server):
+
 python flask_ex1.py 
+
 Examples:
+
 http://localhost?chapter=XXX&news=YYY
+
 http://localhost?chapter=sport&news=15
+
 http://localhost?chapter=travel&news=5
+
 http://localhost/?chapter=news&news=51
+
 http://localhost/?chapter=news&news=2
 
 
@@ -23,12 +30,18 @@ http://localhost/?chapter=news&news=2
 # BBCResponder
 
 BBC scrapping service
+
 Need to create web service to get news titles and links from BBC website.
 The endpoint of the service will receive following request by GET HTTP method:
+
 http://localhost?chapter=XXX&news=YYY
+
 Then it should get html page from the URL: 
+
 https://www.bbc.com/XXX
+
 Parce it given html to get YYY number of top news from the page and then return following JSON:
+
 {
     "chapter" : "XXX",
     "news" : [
