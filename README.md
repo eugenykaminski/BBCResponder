@@ -1,4 +1,4 @@
-h2 How to install/start
+How to install/start
 
 Must be installed:
 
@@ -9,7 +9,7 @@ git clone https://github.com/eugenykaminski/BBCResponder.git
 cd BBCResponder/BBCResponder/spiders
 
 
-h3 Usage (start server):
+Usage (start server):
 
 python flask_ex1.py 
 
