@@ -69,4 +69,5 @@ def hello():
 
 
 if __name__ == '__main__':
+  # Start Flask server
   app.run(host='127.0.0.1', port=80)
