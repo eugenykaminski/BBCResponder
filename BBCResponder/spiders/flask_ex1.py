@@ -22,20 +22,20 @@ from scrapy.crawler import CrawlerProcess
 
 
 
-# Format buffer like needed
+  # Format buffer like needed
 def formatBUFF(chapter, bufferSTDOUT):
 
-# Create "news" list of dictionaries
+  # Create "news" list of dictionaries
   news=bufferSTDOUT.decode("utf-8").replace('url','URL').split('\r\n')
 
-# Create json like structure
-#  result={"chapter" : chapter, "news" : news }
+  # Create json like structure
+  #  result={"chapter" : chapter, "news" : news }
   outStr='{"chapter" : "%s", "news" : %s }' %  (chapter, news[:-1])
 
 
-# Replace ordinary qoutes to double & etc,
+  # Replace ordinary qoutes to double & etc,
   outStr='<pre>'+outStr.replace('\'','"').replace('"{','{').replace('"}','}')+'</pre>'
-# Create beauty output
+  # Create beauty output
   outStr=outStr.replace('[{','[\r\n{').replace( '}",' , '}",\r\n\r\n' ).replace('[{','[\r\n{')
   outStr=outStr.replace('", "','",\r\n  "').replace('] }',']\r\n}')
 
@@ -53,14 +53,14 @@ def hello():
     chapter=request.values['chapter']
     news   =request.values['news']
 
-# Set spider name for call
+    # Set spider name for call
     spiderName = "BBC_Responder"
 
-# Get stdout and return to browsers
-#    bufferSTDOUT=subprocess.check_output(['scrapy', 'crawl', spiderName])
+    # Get stdout and return to browsers
+    # bufferSTDOUT=subprocess.check_output(['scrapy', 'crawl', spiderName])
     bufferSTDOUT=subprocess.check_output(['scrapy', 'crawl', spiderName,'-a','chapter='+chapter,'-a','news='+news])
 
-# format buffer like needed
+    # format buffer like needed
     formattedBuffer=formatBUFF(chapter, bufferSTDOUT)
     return formattedBuffer
 
@@ -70,7 +70,3 @@ def hello():
 
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=80)
-
-
-
-
