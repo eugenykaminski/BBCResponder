@@ -57,7 +57,6 @@ def hello():
     spiderName = "BBC_Responder"
 
     # Get stdout and return to browsers
-    # bufferSTDOUT=subprocess.check_output(['scrapy', 'crawl', spiderName])
     bufferSTDOUT=subprocess.check_output(['scrapy', 'crawl', spiderName,'-a','chapter='+chapter,'-a','news='+news])
 
     # format buffer like needed
